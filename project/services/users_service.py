@@ -13,9 +13,9 @@ class UserService:
     def __init__(self, dao: UserDAO):
         self.dao = dao
 
-    def get_one(self, uid):
+    def get_one(self, id):
         """Метод возвращает пользователя по id"""
-        return self.dao.get_one(uid)
+        return self.dao.get_by_id(id)
 
     def get_by_username(self, username):
         """Метод возвращает пользователя по имени"""
@@ -29,10 +29,6 @@ class UserService:
         """Метод добавляет нового пользователя с хэшированным паролем"""
         user_data["password"] = self.generate_password(user_data["password"])
         return self.dao.create(user_data)
-
-    def delete(self, uid):
-        """Метод удаляет пользователя по id"""
-        return self.dao.delete(uid)
 
     def update(self, user_data):
         """Метод обновления данных пользователя с хэшированным паролем"""

@@ -19,8 +19,8 @@ class BaseDAO(Generic[T]):
     def _items_per_page(self) -> int:
         return current_app.config['ITEMS_PER_PAGE']
 
-    def get_by_id(self, pk: int) -> Optional[T]:
-        return self._db_session.query(self.__model__).get(pk)
+    def get_by_id(self, id: int) -> Optional[T]:
+        return self._db_session.query(self.__model__).get(id)
 
     def get_all(self, page: Optional[int] = None) -> List[T]:
         stmt: BaseQuery = self._db_session.query(self.__model__)
@@ -30,3 +30,13 @@ class BaseDAO(Generic[T]):
             except NotFound:
                 return []
         return stmt.all()
+
+    def get_by_username(self, username):
+        pass
+
+    def create(self, user_data):
+        pass
+
+    def update(self, user_data):
+        pass
+
