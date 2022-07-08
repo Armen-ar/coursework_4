@@ -4,7 +4,7 @@ import pytest
 
 from project.exceptions import ItemNotFound
 from project.models import Genre
-from project.services import GenresService
+from project.services.genres_service import GenresService
 
 
 class TestGenresService:

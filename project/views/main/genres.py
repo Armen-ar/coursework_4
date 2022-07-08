@@ -13,7 +13,7 @@ class GenresView(Resource):
     @api.marshal_with(genre, as_list=True, code=200, description='OK')
     def get(self):
         """
-        Get all genres.
+        Возвращает все жанры.
         """
         return genre_service.get_all(**page_parser.parse_args())
 
@@ -24,6 +24,6 @@ class GenreView(Resource):
     @api.marshal_with(genre, code=200, description='OK')
     def get(self, genre_id: int):
         """
-        Get genre by id.
+        Возвращает жанр по id.
         """
         return genre_service.get_item(genre_id)
