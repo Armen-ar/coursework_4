@@ -20,9 +20,11 @@ class BaseDAO(Generic[T]):
         return current_app.config['ITEMS_PER_PAGE']
 
     def get_by_id(self, id: int) -> Optional[T]:
+        """Метод возвращает сущность по id"""
         return self._db_session.query(self.__model__).get(id)
 
     def get_all(self, page: Optional[int] = None) -> List[T]:
+        """Метод возвращает все сущности по видам"""
         stmt: BaseQuery = self._db_session.query(self.__model__)
         if page:
             try:
@@ -32,11 +34,27 @@ class BaseDAO(Generic[T]):
         return stmt.all()
 
     def get_by_username(self, username):
-        pass
+        """Метод возвращает пользователя по имени"""
+        return self._db_session.query(self.__model__).filter(self.__model__.username == username).one()
 
     def create(self, user_data):
-        pass
+        """Метод добавляет нового пользователя"""
+        entity = self.__model__(**user_data)
+
+        self._db_session.add(entity)
+        self._db_session.commit()
+        return entity
 
     def update(self, user_data):
-        pass
+        """Метод обновляет данные пользователя по id"""
+        uid = user_data.get("id")
+        user = self.get_by_id(uid)
 
+        user.imail = user_data.get("imail")
+        user.password = user_data.get("password")
+        user.name = user_data.get("name")
+        user.surname = user_data.get("surname")
+        user.favorite = user_data.get("favorite")
+
+        self._db_session.add(user)
+        self._db_session.commit()

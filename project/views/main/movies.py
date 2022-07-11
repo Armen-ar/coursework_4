@@ -13,7 +13,7 @@ class MoviesView(Resource):
     @api.marshal_with(movie, as_list=True, code=200, description='OK')
     def get(self):
         """
-        Возвращает все фильмы.
+        Возвращает все фильмы, в приоритете новые фильмы.
         """
         return movie_service.get_all(**page_parser.parse_args())
 
