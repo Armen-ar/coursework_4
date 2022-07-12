@@ -20,11 +20,15 @@ class BaseDAO(Generic[T]):
         return current_app.config['ITEMS_PER_PAGE']
 
     def get_by_id(self, id: int) -> Optional[T]:
-        """Метод возвращает сущность по id"""
+        """
+        Метод возвращает сущность по id
+        """
         return self._db_session.query(self.__model__).get(id)
 
     def get_all(self, page: Optional[int] = None) -> List[T]:
-        """Метод возвращает все сущности по видам"""
+        """
+        Метод возвращает все сущности по видам
+        """
         stmt: BaseQuery = self._db_session.query(self.__model__)
         if page:
             try:
@@ -34,11 +38,15 @@ class BaseDAO(Generic[T]):
         return stmt.all()
 
     def get_by_email(self, email):
-        """Метод возвращает пользователя по имени"""
+        """
+        Метод возвращает пользователя по имени
+        """
         return self._db_session.query(self.__model__).filter(self.__model__.email == email).one()
 
     def create(self, user_data):
-        """Метод добавляет нового пользователя"""
+        """
+        Метод добавляет нового пользователя
+        """
         entity = self.__model__(**user_data)
 
         self._db_session.add(entity)
@@ -46,7 +54,9 @@ class BaseDAO(Generic[T]):
         return entity
 
     def update(self, user_data):
-        """Метод обновляет данные пользователя по id"""
+        """
+        Метод обновляет данные пользователя по id
+        """
         uid = user_data.get("id")
         user = self.get_by_id(uid)
 
@@ -55,6 +65,25 @@ class BaseDAO(Generic[T]):
         user.name = user_data.get("name")
         user.surname = user_data.get("surname")
         user.favorite_genre = user_data.get("favorite_genre")
+
+        self._db_session.add(user)
+        self._db_session.commit()
+
+    def update_partical(self, user_data):
+        """
+        Метод обновляет частично данные пользователя по id
+        """
+        user = self.get_by_id(user_data.get("id"))
+        if "email" in user_data:
+            user.title = user_data.get("email")
+        if "password" in user_data:
+            user.description = user_data.get("password")
+        if "name" in user_data:
+            user.trailer = user_data.get("name")
+        if "surname" in user_data:
+            user.year = user_data.get("surname")
+        if "favorite_genre" in user_data:
+            user.year = user_data.get("favorite_genre")
 
         self._db_session.add(user)
         self._db_session.commit()

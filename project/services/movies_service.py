@@ -10,9 +10,15 @@ class MoviesService:
         self.dao = dao
 
     def get_item(self, id: int) -> Movie:
+        """
+        Метод возвращает фильм по id
+        """
         if movie := self.dao.get_by_id(id):
             return movie
         raise ItemNotFound(f'Movie with id={id} not exists.')
 
     def get_all(self, page: Optional[int] = None) -> list[Movie]:
+        """
+        Метод возвращает все фильмы
+        """
         return self.dao.get_all(page=page)

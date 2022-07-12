@@ -44,6 +44,13 @@ class UserService:
         self.dao.update(user_data)
         return self.dao
 
+    def update_partical(self, user_data):
+        """
+        Метод частично обновляет данные пользователя
+        """
+        self.dao.update_partical(user_data)
+        return self.dao
+
     def generate_password(self, password):
         """
         Метод хеширование пароля
@@ -53,5 +60,5 @@ class UserService:
     def compare_passwords(self, password_hash, other_password) -> bool:
         """
         Метод сравнения password_hash и other_password
-         """
+        """
         return compare_passwords_hash(password_hash, other_password)
