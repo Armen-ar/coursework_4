@@ -8,10 +8,10 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "sasha@mail.ru",
-  "password": "12@test@34",
-  "name": "Sasha",
-  "surname": "Arutyunyan",
+  "email": "Max@mail.ru",
+  "password": "test",
+  "name": "Max",
+  "surname": "",
   "favorite_genre": ""
 }
 

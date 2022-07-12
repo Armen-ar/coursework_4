@@ -46,7 +46,7 @@ class DevelopmentConfig(BaseConfig):
 #             return DevelopmentConfig
 #         elif cls.flask_env == 'production':
 #             return ProductionConfig
-#         elif cls.flask_env == 'testing':
+#         elif cls.flask_env == 'testing_http':
 #             return TestingConfig
 #         raise NotImplementedError
 #
