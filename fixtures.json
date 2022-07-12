@@ -8,7 +8,7 @@
 			"rating": 8.6,
 			"genre_id": 17,
 			"director_id": 1,
-			"pk": 1
+			"id": 1
 		},
 		{
 			"title": "Омерзительная восьмерка",
@@ -18,7 +18,7 @@
 			"rating": 7.8,
 			"genre_id": 4,
 			"director_id": 2,
-			"pk": 2
+			"id": 2
 		},
 		{
 			"title": "Вооружен и очень опасен",

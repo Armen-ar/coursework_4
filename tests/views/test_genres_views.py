@@ -32,4 +32,4 @@ class TestGenresView:
 
     def test_genre_not_found(self, client, genre):
         response = client.get("/genres/2/")
-        assert response.status_code == 404
+        assert response.status_code == 401

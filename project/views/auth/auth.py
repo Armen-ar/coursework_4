@@ -3,21 +3,21 @@ from flask_restx import Namespace, Resource
 
 from project.container import auth_service
 
-api = Namespace('auth')
+auth_ns = Namespace('auth')
 
 
-@api.route('/')
+@auth_ns.route('/')
 class AuthsView(Resource):
     def post(self):
         reg_json = request.json
 
-        username = reg_json.get("username", None)
+        email = reg_json.get("email", None)
         password = reg_json.get("password", None)
 
-        if None in [username, password]:
+        if None in [email, password]:
             return "", 401
 
-        tokens = auth_service.generate_tokens(username, password)
+        tokens = auth_service.generate_tokens(email, password)
 
         return tokens, 201
 

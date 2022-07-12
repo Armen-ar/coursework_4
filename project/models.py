@@ -6,7 +6,7 @@ from project.setup.db import models
 
 
 class Genre(models.Base):
-    __tablename__ = 'genres'
+    __tablename__ = 'genre'
 
     name = Column(String(100), unique=True, nullable=False)
 
@@ -55,7 +55,7 @@ class MovieSchema(Schema):
 class User(models.Base):
     __tablename__ = 'user'
 
-    imail = Column(String(100), nullable=False)
+    email = Column(String(100), nullable=False, unique=True)
     password = Column(String(100), nullable=False)
     name = Column(String(100))
     surname = Column(String(100))
@@ -65,7 +65,7 @@ class User(models.Base):
 
 class UserSchema(Schema):
     id = fields.Int()
-    imail = fields.Str()
+    email = fields.Str()
     password = fields.Str()
     name = fields.Str()
     surname = fields.Str()

@@ -1,10 +1,21 @@
-from .auth import auth_ns, user_ns
-from .main import genres_ns, directors_ns, movies_ns
+from project.views.auth.auth import auth_ns
+from project.views.auth.user import user_ns
+from project.views.main.directors import director_ns
+from project.views.main.genres import genre_ns
+from project.views.main.movies import movie_ns
+
 
 __all__ = [
     'auth_ns',
-    'genres_ns',
+    'genre_ns',
     'user_ns',
-    'directors_ns',
-    'movies_ns',
+    'director_ns',
+    'movie_ns',
 ]
+
+
+
+
+
+
+

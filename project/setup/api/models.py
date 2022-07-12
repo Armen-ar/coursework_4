@@ -27,7 +27,7 @@ movie: Model = api.model('Фильм', {
 
 
 # user: Model = api.model('Пользователь', {
-#     'imail': fields.String(required=True, max_length=100, example=1),
+#     'email': fields.String(required=True, max_length=100, example=1),
 #     'password': fields.String(required=True, max_length=100, example='!1234Agmr'),
 #     'name': fields.String(required=True, max_length=100, example='John'),
 #     'surname': fields.String(required=True, max_length=100, example='Taylor'),

@@ -4,10 +4,10 @@ from flask_restx import Namespace, Resource
 from project.container import user_service
 from project.models import UserSchema
 
-api = Namespace('user')
+user_ns = Namespace('user')
 
 
-@api.route('/')
+@user_ns.route('/')
 class UsersView(Resource):
     def get(self):
         """Представление возвращает всех пользователей"""
@@ -22,12 +22,3 @@ class UsersView(Resource):
         user = user_service.create(data)
 
         return f"Пользователь с id {user.id} создан!", 201
-
-
-@api.route('/<int:uid>')
-class UserView(Resource):
-    def delete(self, uid):
-        """Представление удаляет пользователя по id, допуск auth"""
-        user_service.delete(uid)
-
-        return "", 204

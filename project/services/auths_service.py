@@ -15,12 +15,12 @@ class AuthsService:
     def __init__(self, user_service: UserService):
         self.user_service = user_service
 
-    def generate_tokens(self, username, password, is_refresh=False):
+    def generate_tokens(self, email, password, is_refresh=False):
         """
-        Метод, который генерирует access_token и refresh_token, получая имя и пароль пользователя
+        Метод, который генерирует access_token и refresh_token, получая email и пароль пользователя
         с проверкой is_refresh (создание новых токенов, а не перегенерация refresh_token)
         """
-        user = self.user_service.get_by_username(username)
+        user = self.user_service.get_by_email(email)
 
         if user is None:
             raise abort(404)
@@ -30,8 +30,8 @@ class AuthsService:
                 abort(400)
 
         data = {
-            "username": user.username,
-            "role": user.role
+            "email": user.email,
+            "password": user.password
         }
         # 30 min for access_token
         min30 = datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
@@ -50,11 +50,11 @@ class AuthsService:
 
     def approve_refresh_token(self, refresh_token):
         """
-        Метод получает информацию о пользователе, извлекает значение 'username' и по refresh_token,
+        Метод получает информацию о пользователе, извлекает значение 'email' и по refresh_token,
         который получил в методе generate_tokens вызывает этот же метод и передаёт туда только
-        username и получает новую пару токенов
+        email и получает новую пару токенов
         """
         data = jwt.decode(jwt=refresh_token, key=SECRET, algorithms=[ALGORITHM])
-        username = data.get("username")
+        email = data.get("email")
 
-        return self.generate_tokens(username, None, is_refresh=True)
+        return self.generate_tokens(email, None, is_refresh=True)

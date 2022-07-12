@@ -1,0 +1,24 @@
+GET http://127.0.0.1:5000/user/
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:5000/user/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "sasha@mail.ru",
+  "password": "12@test@34",
+  "name": "Sasha",
+  "surname": "Arutyunyan",
+  "favorite_genre": ""
+}
+
+###
+
+DELETE http://127.0.0.1:5000/user/2
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjU3NjUyMjI1fQ.A6in9MOAM52kfCXp8x-J0y2x4LgQQTT7BgHnsXn4cvk
+
+###

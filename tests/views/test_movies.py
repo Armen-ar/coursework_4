@@ -15,7 +15,7 @@ class TestMoviesView:
     def test_many(self, client, movie):
         response = client.get("/movies/")
         assert response.status_code == 200
-        assert response.json == [{"id": movie.id, "title": movie.name, "description": movie.description,
+        assert response.json == [{"id": movie.id, "title": movie.title, "description": movie.description,
                                   "trailer": movie.trailer, "year": movie.year, "rating": movie.year,
                                   "genre_id": movie.genre_id, "director_id": movie.director_id}]
 
@@ -31,10 +31,10 @@ class TestMoviesView:
     def test_movie(self, client, movie):
         response = client.get("/movies/1/")
         assert response.status_code == 200
-        assert response.json == {"id": movie.id, "title": movie.name, "description": movie.description,
+        assert response.json == {"id": movie.id, "title": movie.title, "description": movie.description,
                                  "trailer": movie.trailer, "year": movie.year, "rating": movie.year,
                                  "genre_id": movie.genre_id, "director_id": movie.director_id}
 
     def test_movie_not_found(self, client, movie):
         response = client.get("/movies/2/")
-        assert response.status_code == 404
+        assert response.status_code == 401

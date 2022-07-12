@@ -33,9 +33,9 @@ class BaseDAO(Generic[T]):
                 return []
         return stmt.all()
 
-    def get_by_username(self, username):
+    def get_by_email(self, email):
         """Метод возвращает пользователя по имени"""
-        return self._db_session.query(self.__model__).filter(self.__model__.username == username).one()
+        return self._db_session.query(self.__model__).filter(self.__model__.email == email).one()
 
     def create(self, user_data):
         """Метод добавляет нового пользователя"""
@@ -50,11 +50,11 @@ class BaseDAO(Generic[T]):
         uid = user_data.get("id")
         user = self.get_by_id(uid)
 
-        user.imail = user_data.get("imail")
+        user.email = user_data.get("email")
         user.password = user_data.get("password")
         user.name = user_data.get("name")
         user.surname = user_data.get("surname")
-        user.favorite = user_data.get("favorite")
+        user.favorite_genre = user_data.get("favorite_genre")
 
         self._db_session.add(user)
         self._db_session.commit()
