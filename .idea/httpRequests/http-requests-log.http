@@ -1,4 +1,31 @@
-POST http://127.0.0.1:5000/auth
+POST http://127.0.0.1:5000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "Rob@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T104619.500.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/5
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T104612.404.html
+
+###
+
+POST http://127.0.0.1:5000/auth/
 Accept: application/json
 Content-Type: application/json
 
@@ -7,11 +34,24 @@ Content-Type: application/json
   "password": "@test@12345"
 }
 
-<> 2022-07-13T001025.201.json
+<> 2022-07-13T104549.404.html
 
 ###
 
-POST http://127.0.0.1:5000/auth/
+POST http://127.0.0.1:5000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "Rob@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T104534.500.html
+
+###
+
+POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
@@ -19,11 +59,79 @@ Content-Type: application/json
   "password": "test"
 }
 
-<> 2022-07-13T000905.201.json
+<> 2022-07-13T104527.201.json
 
 ###
 
-POST http://127.0.0.1:5000/auth
+POST http://127.0.0.1:5000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "Rob@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T103908.500.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/5
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102923.404.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102919.404.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102914.500.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102835.404.html
+
+###
+
+POST http://127.0.0.1:5000/auth/
 Accept: application/json
 Content-Type: application/json
 
@@ -32,11 +140,24 @@ Content-Type: application/json
   "password": "@test@12345"
 }
 
-<> 2022-07-13T000258.404.html
+<> 2022-07-13T102828.404.html
 
 ###
 
-POST http://127.0.0.1:5000/auth/
+POST http://127.0.0.1:5000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "John@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102754.201.json
+
+###
+
+POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
@@ -44,35 +165,24 @@ Content-Type: application/json
   "password": "test"
 }
 
-<> 2022-07-13T000251.404.html
+<> 2022-07-13T102745.201.json
 
 ###
 
-POST http://127.0.0.1:5000/auth/
+PUT http://127.0.0.1:5000/auth/
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
 
 {
   "email": "Max@mail.ru",
   "password": "test"
 }
 
-<> 2022-07-13T000003.405.json
+<> 2022-07-13T102650.405.json
 
 ###
 
 POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "Max@mail.ru",
-  "password": "test"
-}
-
-<> 2022-07-12T235920.405.json
-
-###
-
-POST http://127.0.0.1:5000/auth
 Accept: application/json
 Content-Type: application/json
 
@@ -81,11 +191,24 @@ Content-Type: application/json
   "password": "@test@12345"
 }
 
-<> 2022-07-12T235908.500.html
+<> 2022-07-13T102645.201.json
 
 ###
 
-POST http://127.0.0.1:5000/auth/
+POST http://127.0.0.1:5000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "John@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102636.404.html
+
+###
+
+POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
@@ -93,24 +216,11 @@ Content-Type: application/json
   "password": "test"
 }
 
-<> 2022-07-12T235900.405.json
+<> 2022-07-13T102627.201.json
 
 ###
 
-POST http://127.0.0.1:5000/auth
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T235804.500.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
+POST http://127.0.0.1:5000/auth/login/
 Content-Type: application/json
 
 {
@@ -118,24 +228,89 @@ Content-Type: application/json
   "password": "test"
 }
 
-<> 2022-07-12T235740.405.json
+<> 2022-07-13T102621.404.html
 
 ###
 
-POST http://127.0.0.1:5000/auth
-Accept: application/json
+PUT http://127.0.0.1:5000/auth/
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
 
 {
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
+  "email": "Max@mail.ru",
+  "password": "test"
 }
 
-<> 2022-07-12T235726.500.html
+<> 2022-07-13T102604.405.json
 
 ###
 
-POST http://127.0.0.1:5000/auth/
+PUT http://127.0.0.1:5000/auth
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102553.500.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102549.405.json
+
+###
+
+PUT http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102544.500.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102541.404.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/5
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102532.404.html
+
+###
+
+POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
@@ -143,51 +318,151 @@ Content-Type: application/json
   "password": "test"
 }
 
-<> 2022-07-12T235709.405.json
+###
+
+PUT http://127.0.0.1:5000/auth
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
 
 ###
 
-POST http://127.0.0.1:5000/user/
-Accept: application/json
+PUT http://127.0.0.1:5000/auth/5
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/5
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+###
+
+PUT http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102159.500.html
+
+###
+
+POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
   "email": "Max@mail.ru",
-  "password": "test",
-  "name": "Max",
-  "surname": "",
-  "favorite_genre": ""
+  "password": "test"
 }
 
-<> 2022-07-12T235635.201.json
+<> 2022-07-13T102136.201.json
+
+###
+
+POST http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102106.201.json
+
+###
+
+PUT http://127.0.0.1:5000/auth/
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T102027.405.json
+
+###
+
+POST http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T101955.201.json
+
+###
+
+PUT http://127.0.0.1:5000/auth/login/
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T101942.404.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T101925.405.json
+
+###
+
+PUT http://127.0.0.1:5000/auth
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T101918.500.html
+
+###
+
+PUT http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T101909.500.html
 
 ###
 
 POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T235535.405.json
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T235502.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/register/
 Accept: application/json
 Content-Type: application/json
 
@@ -196,7 +471,19 @@ Content-Type: application/json
   "password": "@test@12345"
 }
 
-<> 2022-07-12T235450.404.html
+<> 2022-07-13T101631.201.json
+
+###
+
+POST http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T101611.201.json
 
 ###
 
@@ -209,45 +496,81 @@ Content-Type: application/json
   "password": "@test@12345"
 }
 
-<> 2022-07-12T235430.404.html
+<> 2022-07-13T101539.404.html
 
 ###
 
 POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "Leo@mail.ru",
-  "password": "test"
-}
-
-<> 2022-07-12T235152.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/register/
-Accept: application/json
 Content-Type: application/json
 
 {
   "email": "Max@mail.ru",
-  "password": "Max@test"
+  "password": "test"
 }
 
-<> 2022-07-12T235134.404.html
+<> 2022-07-13T101532.201.json
 
 ###
 
-POST http://127.0.0.1:5000/auth/register/
-Accept: application/json
+POST http://127.0.0.1:5000/auth/
 Content-Type: application/json
 
 {
   "email": "Max@mail.ru",
-  "password": "Max@test"
+  "password": "test"
 }
 
-<> 2022-07-12T235131.404.html
+<> 2022-07-13T101513.201.json
+
+###
+
+POST http://127.0.0.1:5000/auth/login/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "armen@mail.ru",
+  "password": "@test@12345"
+}
+
+<> 2022-07-13T101504.404.html
+
+###
+
+POST http://127.0.0.1:5000/auth/login/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "armen@mail.ru",
+  "password": "@test@12345"
+}
+
+<> 2022-07-13T101452.404.html
+
+###
+
+POST http://127.0.0.1:5000/auth/
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T100949.201.json
+
+###
+
+POST http://127.0.0.1:5000/auth/
+Content-Type: application/json
+
+{
+  "email": "Max@mail.ru",
+  "password": "test"
+}
+
+<> 2022-07-13T002722.404.html
 
 ###
 
@@ -256,372 +579,50 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "Leo@mail.ru",
+  "email": "John@mail.ru",
   "password": "test"
 }
 
-<> 2022-07-12T235030.404.html
+<> 2022-07-13T002716.404.html
 
 ###
 
-POST http://127.0.0.1:5000/auth/register/
+POST http://127.0.0.1:5000/auth
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "Leo@mail.ru",
+  "email": "John@mail.ru",
   "password": "test"
 }
 
-<> 2022-07-12T234901.404.html
+<> 2022-07-13T001755.201.json
 
 ###
 
-POST http://127.0.0.1:5000/auth/register/
+POST http://127.0.0.1:5000/auth
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "Leo@mail.ru",
+  "email": "John@mail.ru",
   "password": "test"
 }
 
-<> 2022-07-12T223955.404.html
+<> 2022-07-13T001726.404.html
 
 ###
 
-POST http://127.0.0.1:5000/auth/register/
+POST http://127.0.0.1:5000/auth/register
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "Leo@mail.ru",
+  "email": "John@mail.ru",
   "password": "test"
 }
 
-<> 2022-07-12T223937.404.html
-
-###
-
-POST http://127.0.0.1:5000/register/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "Leo@mail.ru",
-  "password": "test"
-}
-
-<> 2022-07-12T223706.404.html
-
-###
-
-POST http://127.0.0.1:5000/register/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "Leo@mail.ru",
-  "password": "test"
-}
-
-<> 2022-07-12T223647.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "Leo@mail.ru",
-  "password": "test"
-}
-
-<> 2022-07-12T223316.404.html
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "Leo@mail.ru",
-  "password": "test",
-  "name": "Leo",
-  "surname": "",
-  "favorite_genre": ""
-}
-
-<> 2022-07-12T223245.201.json
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T223205.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T223044.404.html
-
-###
-
-GET http://127.0.0.1:5000/movies
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFybWVuQG1haWwucnUiLCJwYXNzd29yZCI6ImxxdmJEMWxuMS9VZzNIVHI0WU81eFFuKy9KdWNycW5lQ2xlQUVLb0I4WGc9IiwiZXhwIjoxNjU3NjUyNzA2fQ.jS5eIHi_mg7J3mvHKeqg8-A8J5vSkw67b_hm_56Ru4c
-
-<> 2022-07-12T223018.401.json
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T222949.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T222943.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T222826.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T222801.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T222748.404.html
-
-###
-
-GET http://127.0.0.1:5000/movies
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFybWVuQG1haWwucnUiLCJwYXNzd29yZCI6ImxxdmJEMWxuMS9VZzNIVHI0WU81eFFuKy9KdWNycW5lQ2xlQUVLb0I4WGc9IiwiZXhwIjoxNjU3NjUyNzA2fQ.jS5eIHi_mg7J3mvHKeqg8-A8J5vSkw67b_hm_56Ru4c
-
-<> 2022-07-12T222730.401.json
-
-###
-
-GET http://127.0.0.1:5000/movies
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFybWVuQG1haWwucnUiLCJwYXNzd29yZCI6ImxxdmJEMWxuMS9VZzNIVHI0WU81eFFuKy9KdWNycW5lQ2xlQUVLb0I4WGc9IiwiZXhwIjoxNjU3NjUyNzA2fQ.jS5eIHi_mg7J3mvHKeqg8-A8J5vSkw67b_hm_56Ru4c
-
-<> 2022-07-12T213548.200.json
-
-###
-
-GET http://127.0.0.1:5000/movies
-Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbWFpbCI6ImFybWVuQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3NjQ4MjgzfQ.bXT20N56g-d7PUVSjBsnl3eCit4YpHwKy-RH2knRNkE
-
-<> 2022-07-12T213541.401.json
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T213506.201.json
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "sasha@mail.ru",
-  "password": "12@test@34",
-  "name": "Sasha",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-<> 2022-07-12T213446.201.json
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "@test@",
-  "name": "Armen",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-<> 2022-07-12T213355.500.html
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "@test@54321",
-  "name": "David",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-<> 2022-07-12T213337.201.json
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345",
-  "name": "Armen",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-<> 2022-07-12T213311.201.json
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345",
-  "name": "Armen",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345",
-  "name": "Armen",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
-}
-
-<> 2022-07-12T212843.500.html
-
-###
-
-POST http://127.0.0.1:5000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "armen@mail.ru",
-  "password": "@test@12345",
-  "name": "Armen",
-  "surname": "Arutyunyan",
-  "favorite_genre": ""
-}
-
-<> 2022-07-12T212753.201.json
-
-###
-
-DELETE http://127.0.0.1:5000/user/2
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjU3NjUyMjI1fQ.A6in9MOAM52kfCXp8x-J0y2x4LgQQTT7BgHnsXn4cvk
-
-<> 2022-07-12T212728.404.html
-
-###
-
-POST http://127.0.0.1:5000/auth/
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test1"
-}
-
-<> 2022-07-12T212705.201.json
+<> 2022-07-13T001623.500.html
 
 ###
 

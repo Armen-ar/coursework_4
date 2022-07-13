@@ -1,4 +1,4 @@
-POST http://127.0.0.1:5000/auth/
+POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
@@ -8,24 +8,25 @@ Content-Type: application/json
 
 ###
 
-POST http://127.0.0.1:5000/auth
+POST http://127.0.0.1:5000/auth/register
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
+  "email": "Rob@mail.ru",
+  "password": "test"
 }
 
 ###
 
-POST http://127.0.0.1:5000/auth/login/
-Accept: application/json
+PUT http://127.0.0.1:5000/auth/login/5
 Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
 
 {
-  "email": "armen@mail.ru",
-  "password": "@test@12345"
+  "email": "Max@mail.ru",
+  "password": "test"
 }
 
 ###
