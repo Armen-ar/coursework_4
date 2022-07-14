@@ -51,20 +51,15 @@ class BaseDAO(Generic[T]):
 
         self._db_session.add(entity)
         self._db_session.commit()
-        return entity
 
     def update(self, user_data):
         """
-        Метод обновляет данные пользователя по id
+        Метод обновляет пароль пользователя по id
         """
         uid = user_data.get("id")
         user = self.get_by_id(uid)
 
-        user.email = user_data.get("email")
         user.password = user_data.get("password")
-        user.name = user_data.get("name")
-        user.surname = user_data.get("surname")
-        user.favorite_genre = user_data.get("favorite_genre")
 
         self._db_session.add(user)
         self._db_session.commit()
@@ -74,10 +69,6 @@ class BaseDAO(Generic[T]):
         Метод обновляет частично данные пользователя по id
         """
         user = self.get_by_id(user_data.get("id"))
-        if "email" in user_data:
-            user.title = user_data.get("email")
-        if "password" in user_data:
-            user.description = user_data.get("password")
         if "name" in user_data:
             user.trailer = user_data.get("name")
         if "surname" in user_data:

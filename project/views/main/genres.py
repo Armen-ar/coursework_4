@@ -10,7 +10,6 @@ genre_ns = Namespace('genres')
 
 @genre_ns.route('/')
 class GenresView(Resource):
-    @auth_required
     @genre_ns.expect(page_parser)
     @genre_ns.marshal_with(genre, as_list=True, code=200, description='OK')
     def get(self):
@@ -22,7 +21,6 @@ class GenresView(Resource):
 
 @genre_ns.route('/<int:genre_id>/')
 class GenreView(Resource):
-    @auth_required
     @genre_ns.response(404, 'Not Found')
     @genre_ns.marshal_with(genre, code=200, description='OK')
     def get(self, genre_id: int):

@@ -34,7 +34,7 @@ class UserService:
         Метод добавляет нового пользователя с хэшированным паролем
         """
         user_data["password"] = self.generate_password(user_data["password"])
-        return self.dao.create(user_data)
+        self.dao.create(user_data)
 
     def update(self, user_data):
         """

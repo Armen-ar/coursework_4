@@ -1,28 +1,28 @@
-POST http://127.0.0.1:5000/auth/login
+POST http://127.0.0.1:25000/auth/login
 Content-Type: application/json
 
 {
-  "email": "Max@mail.ru",
+  "email": "maria@mail.ru",
   "password": "test"
 }
 
 ###
 
-POST http://127.0.0.1:5000/auth/register
+POST http://127.0.0.1:25000/auth/register
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "Rob@mail.ru",
+  "email": "maria@mail.ru",
   "password": "test"
 }
 
 ###
 
-PUT http://127.0.0.1:5000/auth/login/5
+PUT http://127.0.0.1:25000/auth/login/5
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
 
 {
   "email": "Max@mail.ru",

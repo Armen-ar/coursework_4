@@ -6,7 +6,7 @@ from project.container import auth_service, user_service
 auth_ns = Namespace('auth')
 
 
-@auth_ns.route('/login')
+@auth_ns.route('/login/')
 class AuthsView(Resource):
     def post(self):
         """
@@ -14,8 +14,8 @@ class AuthsView(Resource):
         """
         reg_json = request.json
 
-        email = reg_json.get("email", None)
-        password = reg_json.get("password", None)
+        email = reg_json.get("email")
+        password = reg_json.get("password")
 
         if None in [email, password]:
             return "", 401
@@ -36,7 +36,7 @@ class AuthsView(Resource):
         return tokens, 201
 
 
-@auth_ns.route('/register')
+@auth_ns.route('/register/')
 class AuthsView(Resource):
     def post(self):
         """
@@ -44,12 +44,12 @@ class AuthsView(Resource):
         """
         reg_json = request.json
 
-        email = reg_json.get("email", None)
-        password = reg_json.get("password", None)
+        email = reg_json.get("email")
+        password = reg_json.get("password")
 
         if None in [email, password]:
             return "", 401
 
-        user = user_service.create(reg_json)
+        user_service.create(reg_json)
 
-        return user, 201
+        return 201

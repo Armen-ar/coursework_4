@@ -11,7 +11,6 @@ director_ns = Namespace('directors')
 
 @director_ns.route('/')
 class DirectorsView(Resource):
-    @auth_required
     @director_ns.expect(page_parser)
     @director_ns.marshal_with(director, as_list=True, code=200, description='OK')
     def get(self):
@@ -23,7 +22,6 @@ class DirectorsView(Resource):
 
 @director_ns.route('/<int:director_id>/')
 class DirectorView(Resource):
-    @auth_required
     @director_ns.response(404, 'Not Found')
     @director_ns.marshal_with(director, code=200, description='OK')
     def get(self, director_id: int):

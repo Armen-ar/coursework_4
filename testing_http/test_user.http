@@ -1,9 +1,16 @@
-GET http://127.0.0.1:5000/user/
+GET http://127.0.0.1:25000/user
 Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3ODIwMTY0fQ.aOA_2Ctx6dN3ZAwWjK6rj_g1eh54MHaSyz0DL3EXpNg
 
 ###
 
-POST http://127.0.0.1:5000/user/
+PUT http://127.0.0.1:25000/user/test&@test@
+Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
+
+###
+
+POST http://127.0.0.1:25000/user/
 Accept: application/json
 Content-Type: application/json
 
@@ -17,8 +24,8 @@ Content-Type: application/json
 
 ###
 
-DELETE http://127.0.0.1:5000/user/2
+DELETE http://127.0.0.1:25000/user/2
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjU3NjUyMjI1fQ.A6in9MOAM52kfCXp8x-J0y2x4LgQQTT7BgHnsXn4cvk
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjU3NjUyMjI1fQ.A6in9MOAM52kfCXp8x-J0y2x4LgQQTT7BgHnsXn4cvk
 
 ###
