@@ -1,4 +1,3 @@
-from marshmallow import Schema, fields
 from sqlalchemy import Column, String, Integer, Float, ForeignKey
 from sqlalchemy.orm import relationship
 
@@ -11,20 +10,10 @@ class Genre(models.Base):
     name = Column(String(100), unique=True, nullable=False)
 
 
-# class GenreSchema(Schema):
-#     id = fields.Int()
-#     name = fields.Str()
-
-
 class Director(models.Base):
     __tablename__ = 'director'
 
     name = Column(String(100), unique=True, nullable=False)
-
-
-# class DirectorSchema(Schema):
-#     id = fields.Int()
-#     name = fields.Str()
 
 
 class Movie(models.Base):
@@ -41,17 +30,6 @@ class Movie(models.Base):
     director = relationship("Director")
 
 
-# class MovieSchema(Schema):
-#     id = fields.Int()
-#     title = fields.Str()
-#     description = fields.Str()
-#     trailer = fields.Str()
-#     year = fields.Int()
-#     rating = fields.Float()
-#     director = fields.Pluck('DirectorSchema', 'name')
-#     genre = fields.Pluck('GenreSchema', 'name')
-
-
 class User(models.Base):
     __tablename__ = 'user'
 
@@ -61,12 +39,3 @@ class User(models.Base):
     surname = Column(String(100))
     favorite_genre = Column(Integer, ForeignKey("genre.id"))
     favorite = relationship("Genre")
-
-
-# class UserSchema(Schema):
-#     id = fields.Int()
-#     email = fields.Str()
-#     password = fields.Str()
-#     name = fields.Str()
-#     surname = fields.Str()
-#     favorite = fields.Pluck('GenreSchema', 'name')

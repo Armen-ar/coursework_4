@@ -4,15 +4,3 @@ class BaseServiceError(Exception):
 
 class ItemNotFound(BaseServiceError):
     code = 404
-
-
-class UserAlreadyExists(Exception):
-    pass
-
-
-class IncorrectPassword(Exception):
-    pass
-
-
-class InvalidToken(Exception):
-    pass

@@ -70,11 +70,11 @@ class BaseDAO(Generic[T]):
         """
         user = self.get_by_id(user_data.get("id"))
         if "name" in user_data:
-            user.trailer = user_data.get("name")
+            user.name = user_data.get("name")
         if "surname" in user_data:
-            user.year = user_data.get("surname")
-        if "favorite_genre" in user_data:
-            user.year = user_data.get("favorite_genre")
+            user.surname = user_data.get("surname")
+        if "favorite" in user_data:
+            user.favorite = user_data.get("favorite")
 
         self._db_session.add(user)
         self._db_session.commit()
