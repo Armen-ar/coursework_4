@@ -2,13 +2,11 @@ import calendar
 import datetime
 
 import jwt
+from flask import current_app
 from flask_restx import abort
 
-from project.config import DevelopmentConfig
 from project.services.users_service import UserService
-
-SECRET = DevelopmentConfig.SECRET_KEY
-ALGORITHM = DevelopmentConfig.ALGORITHM
+from project.tools.security import compare_passwords_hash
 
 
 class AuthsService:
@@ -26,22 +24,24 @@ class AuthsService:
             raise abort(404)
 
         if not is_refresh:
-            if not self.user_service.compare_passwords(user.password, password):
+            if not compare_passwords_hash(user.password, password):
                 abort(400)
 
         data = {
             "email": user.email,
             "password": user.password
         }
-        # 30 min for access_token
-        min30 = datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
-        data["exp"] = calendar.timegm(min30.timetuple())
-        access_token = jwt.encode(data, SECRET, algorithm=ALGORITHM)
+        # 15 min for access_token
+        min15 = datetime.datetime.utcnow() + datetime.timedelta(minutes=current_app.config['TOKEN_EXPIRE_MINUTES'])
+        data["exp"] = calendar.timegm(min15.timetuple())
+        access_token = jwt.encode(data, key=current_app.config['SECRET_KEY'],
+                                  algorithm=current_app.config['ALGORITHM'])
 
         # 130 days for refresh_token
-        days130 = datetime.datetime.utcnow() + datetime.timedelta(days=130)
+        days130 = datetime.datetime.utcnow() + datetime.timedelta(days=current_app.config['TOKEN_EXPIRE_DAYS'])
         data["exp"] = calendar.timegm(days130.timetuple())
-        refresh_token = jwt.encode(data, SECRET, algorithm=ALGORITHM)
+        refresh_token = jwt.encode(data, key=current_app.config['SECRET_KEY'],
+                                   algorithm=current_app.config['ALGORITHM'])
 
         return {
             "access_token": access_token,
@@ -54,7 +54,8 @@ class AuthsService:
         который получил в методе generate_tokens вызывает этот же метод и передаёт туда только
         email и получает новую пару токенов
         """
-        data = jwt.decode(jwt=refresh_token, key=SECRET, algorithms=[ALGORITHM])
+        data = jwt.decode(jwt=refresh_token, key=current_app.config['SECRET_KEY'],
+                          algorithms=[current_app.config['ALGORITHM']])
         email = data.get("email")
 
         return self.generate_tokens(email, None, is_refresh=True)

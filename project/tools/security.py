@@ -6,6 +6,9 @@ from flask import current_app
 
 
 def __generate_password_digest(password: str) -> bytes:
+    """
+    Метод хэширует пароль
+    """
     return hashlib.pbkdf2_hmac(
         hash_name="sha256",
         password=password.encode("utf-8"),
@@ -15,12 +18,16 @@ def __generate_password_digest(password: str) -> bytes:
 
 
 def generate_password_hash(password: str) -> str:
+    """
+    Метод кодирует хэшированный пароль
+    """
     return base64.b64encode(__generate_password_digest(password)).decode('utf-8')
 
 
 def compare_passwords_hash(password_hash, other_password) -> bool:
-    """Метод возвращает сравнение бинарных последовательностей чисел(из базы данных 'password_hash'
-     и сгенерированный 'other_password'), возвращает либо True либо False
+    """
+    Метод возвращает сравнение бинарных последовательностей чисел(из базы данных 'password_hash'
+    и сгенерированный 'other_password'), возвращает либо True либо False
      """
     decoded_digest = base64.b64decode(password_hash)
 

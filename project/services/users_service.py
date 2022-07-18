@@ -1,10 +1,8 @@
-from project.config import DevelopmentConfig
+from flask_restx import abort
+
 from project.dao.main import UserDAO
 from project.tools.security import generate_password_hash
 from project.tools.security import compare_passwords_hash
-
-PWD_HASH_SALT = DevelopmentConfig.PWD_HASH_SALT
-PWD_HASH_ITERATIONS = DevelopmentConfig.PWD_HASH_ITERATIONS
 
 
 class UserService:
@@ -19,7 +17,7 @@ class UserService:
 
     def get_by_email(self, email):
         """
-        Метод возвращает пользователя по имени
+        Метод возвращает пользователя по логину
         """
         return self.dao.get_by_email(email)
 
@@ -33,14 +31,14 @@ class UserService:
         """
         Метод добавляет нового пользователя с хэшированным паролем
         """
-        user_data["password"] = self.generate_password(user_data["password"])
+        user_data["password"] = generate_password_hash(user_data["password"])
         self.dao.create(user_data)
 
     def update(self, user_data):
         """
         Метод обновления данных пользователя с хэшированным паролем
         """
-        user_data["password"] = self.generate_password(user_data["password"])
+        user_data["password"] = generate_password_hash(user_data["password"])
         self.dao.update(user_data)
         return self.dao
 
@@ -51,14 +49,17 @@ class UserService:
         self.dao.update_partical(user_data)
         return self.dao
 
-    def generate_password(self, password):
+    def password_change(self, password: str, other_password: str, email):
         """
-        Метод хеширование пароля
+        Метод замены пароля пользователя
         """
-        return generate_password_hash(password)
+        user = self.get_by_email(email)
+        user_password = user.password
+        new_password = generate_password_hash(password)
+        old_password = generate_password_hash(other_password)
 
-    def compare_passwords(self, password_hash, other_password) -> bool:
-        """
-        Метод сравнения password_hash и other_password
-        """
-        return compare_passwords_hash(password_hash, other_password)
+        if compare_passwords_hash(old_password, user_password):
+            user.password = new_password
+            return self.dao.update(user)
+        else:
+            abort(404)

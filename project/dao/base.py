@@ -4,6 +4,8 @@ from flask import current_app
 from flask_sqlalchemy import BaseQuery
 from sqlalchemy.orm import scoped_session
 from werkzeug.exceptions import NotFound
+
+from project.models import User
 from project.setup.db.models import Base
 
 T = TypeVar('T', bound=Base)
@@ -39,7 +41,7 @@ class BaseDAO(Generic[T]):
 
     def get_by_email(self, email):
         """
-        Метод возвращает пользователя по имени
+        Метод возвращает пользователя по email
         """
         return self._db_session.query(self.__model__).filter(self.__model__.email == email).one()
 
@@ -52,29 +54,24 @@ class BaseDAO(Generic[T]):
         self._db_session.add(entity)
         self._db_session.commit()
 
-    def update(self, user_data):
+    def update(self, user: User):
         """
-        Метод обновляет пароль пользователя по id
+        Метод обновляет пароль пользователя
         """
-        uid = user_data.get("id")
-        user = self.get_by_id(uid)
-
-        user.password = user_data.get("password")
-
         self._db_session.add(user)
         self._db_session.commit()
 
     def update_partical(self, user_data):
         """
-        Метод обновляет частично данные пользователя по id
+        Метод обновляет частично данные пользователя
         """
         user = self.get_by_id(user_data.get("id"))
         if "name" in user_data:
             user.name = user_data.get("name")
         if "surname" in user_data:
             user.surname = user_data.get("surname")
-        if "favorite" in user_data:
-            user.favorite = user_data.get("favorite")
+        if "favorite_genre" in user_data:
+            user.favorite_genre = user_data.get("favorite_genre")
 
         self._db_session.add(user)
         self._db_session.commit()

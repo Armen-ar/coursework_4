@@ -32,4 +32,4 @@ class TestDirectorsView:
 
     def test_director_not_found(self, client, director):
         response = client.get("/directors/2/")
-        assert response.status_code == 401
+        assert response.status_code == 404

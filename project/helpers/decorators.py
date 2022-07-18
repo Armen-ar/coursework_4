@@ -1,16 +1,12 @@
 import jwt
-from flask import request, abort
-
-from project.config import DevelopmentConfig
-
-SECRET = DevelopmentConfig.SECRET_KEY
-ALGORITHM = DevelopmentConfig.ALGORITHM
+from flask import request, abort, current_app
 
 
 def auth_required(func):
     """
     Метод проверяет авторизацию, наличие токена и его декодирование
     """
+
     def wrapper(*args, **kwargs):
         if "Authorization" not in request.headers:
             abort(401)
@@ -20,11 +16,14 @@ def auth_required(func):
 
         print(token)
         try:
-            jwt.decode(token, SECRET, algorithms=[ALGORITHM])
+            jwt.decode(token, key=current_app.config['SECRET_KEY'],
+                       algorithms=current_app.config['ALGORITHM'])
         except Exception as e:
             print("JWT Decode Exception", e)
             abort(401)
+        req_json = request.json
+        email = req_json.get('email')
 
-        return func(*args, **kwargs)
+        return func(*args, **kwargs, email=email)
 
     return wrapper

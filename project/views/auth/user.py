@@ -12,17 +12,19 @@ user_ns = Namespace('user')
 class UsersView(Resource):
     @user_ns.marshal_with(user, as_list=True, code=200, description='OK')
     @auth_required
-    def get(self):
+    def get(self, email):
         """
         Представление возвращает информацию о пользователе, допуск auth
         """
-        users = user_service.get_all()
+        user_ = user_service.get_by_email(email)
 
-        return users, 200
+        return user_, 200
 
     @auth_required
     def patch(self, uid):
-        """Представление обновляет частично фильм по id, допуск auth"""
+        """
+        Представление обновляет частично фильм по id, допуск auth
+        """
         req_json = request.json
         if "id" not in req_json:
             req_json["id"] = uid
@@ -30,13 +32,20 @@ class UsersView(Resource):
         return "", 204
 
 
-@user_ns.route('/*password')
+@user_ns.route('/password/')
 class UsersView(Resource):
     @auth_required
-    def put(self, uid):
-        """Представление заменяет старый пароль пользователя на новый по id, допуск auth"""
+    def put(self):
+        """
+        Представление заменяет старый пароль пользователя на новый по email, допуск auth
+        """
         req_json = request.json
-        if "id" not in req_json:
-            req_json["id"] = uid
-        user_service.update(req_json)
-        return "", 204
+        other_password = req_json['old_password']
+        password = req_json['new_password']
+        email = req_json.get('email')
+        user = user_service.password_change(password, other_password, email)
+        uid = user.id
+        data = {'id': uid, 'password': password}
+        user_service.update(data)
+
+        return "", 200

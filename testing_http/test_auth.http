@@ -2,8 +2,8 @@ POST http://127.0.0.1:25000/auth/login
 Content-Type: application/json
 
 {
-  "email": "maria@mail.ru",
-  "password": "test"
+  "email": "david@mail.ru",
+  "password": "test2"
 }
 
 ###
@@ -13,20 +13,20 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "maria@mail.ru",
+  "email": "armen@mail.ru",
   "password": "test"
 }
 
 ###
 
-PUT http://127.0.0.1:25000/auth/login/5
+PUT http://127.0.0.1:25000/auth/login/
 Content-Type: application/json
 Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Ik1heEBtYWlsLnJ1IiwicGFzc3dvcmQiOiJ2bkVOSG1UTHZDOUczdi80anI2WkM5N21tSHkySkIrWjlMaDBXQ2lsbExzPSIsImV4cCI6MTY2ODkyODg5Nn0.MvaaSC9H_QgvKY3b38AzTDBoMcBvCYUvTs7GJBDYO7c
+Cookie: RefreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFybWVuQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjY5MTk0Njc0fQ.w17QZBEFoyGWu_GTgcc41e6AJBav0dEG0yJd_rO7zZw
 
 {
-  "email": "Max@mail.ru",
-  "password": "test"
+  "email": "david@mail.ru",
+  "password": "test2"
 }
 
 ###

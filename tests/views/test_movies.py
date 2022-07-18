@@ -37,4 +37,4 @@ class TestMoviesView:
 
     def test_movie_not_found(self, client, movie):
         response = client.get("/movies/2/")
-        assert response.status_code == 401
+        assert response.status_code == 404
