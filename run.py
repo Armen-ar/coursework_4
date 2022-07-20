@@ -7,6 +7,9 @@ app = create_app(DevelopmentConfig)
 
 @app.shell_context_processor
 def shell():
+    """
+    Метод ?????????
+    """
     return {
         "db": db,
         "Genre": Genre,

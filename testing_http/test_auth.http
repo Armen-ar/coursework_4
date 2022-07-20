@@ -2,8 +2,8 @@ POST http://127.0.0.1:25000/auth/login
 Content-Type: application/json
 
 {
-  "email": "david@mail.ru",
-  "password": "test2"
+  "email": "sasha@mail.ru",
+  "password": "test5"
 }
 
 ###
@@ -13,8 +13,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "armen@mail.ru",
-  "password": "test"
+  "email": "elina@mail.ru",
+  "password": "test6"
 }
 
 ###

@@ -8,15 +8,24 @@ from project.views import auth_ns, genre_ns, user_ns, movie_ns, director_ns
 
 
 def base_service_error_handler(exception: BaseServiceError):
+    """
+    Метод обрабатывает ошибки
+    """
     return jsonify({'error': str(exception)}), exception.code
 
 
 def create_app(config_obj):
+    """
+    Метод создаёт Flask приложение
+    """
     app = Flask(__name__)
     app.config.from_object(config_obj)
 
     @app.route('/')
     def index():
+        """
+        Метод соединяет бэкенд с фронтендом
+        """
         return render_template('index.html')
 
     CORS(app=app)

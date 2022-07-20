@@ -7,6 +7,9 @@ from project.tools.security import compare_passwords_hash
 
 class UserService:
     def __init__(self, dao: UserDAO):
+        """
+        Конструктор для всех методов класса
+        """
         self.dao = dao
 
     def get_one(self, id):
@@ -40,7 +43,7 @@ class UserService:
         """
         user_data["password"] = generate_password_hash(user_data["password"])
         self.dao.update(user_data)
-        return self.dao
+        return user_data
 
     def update_partical(self, user_data):
         """
@@ -60,6 +63,7 @@ class UserService:
 
         if compare_passwords_hash(old_password, user_password):
             user.password = new_password
+
             return self.dao.update(user)
         else:
             abort(404)

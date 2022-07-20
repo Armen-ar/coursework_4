@@ -11,6 +11,9 @@ from project.utils import read_json
 
 
 def load_data(data: List[Dict[str, Any]], model: Type[models.Base]) -> None:
+    """
+    Метод загружает данные из файла fixtures.json
+    """
     for item in data:
         item['id'] = item.pop('id')
         db.session.add(model(**item))

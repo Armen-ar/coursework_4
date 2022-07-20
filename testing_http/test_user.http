@@ -1,26 +1,13 @@
 GET http://127.0.0.1:25000/user
 Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3ODIwMTY0fQ.aOA_2Ctx6dN3ZAwWjK6rj_g1eh54MHaSyz0DL3EXpNg
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhc2hhQG1haWwucnUiLCJwYXNzd29yZCI6InlzZzB0c1J1cmV0TzZQemJtRU9DYnZHanNoSEhmSDd2VkQ2ZjhRWEpWOFE9IiwiZXhwIjoxNjU4MjQ5NDcyfQ.8hswcAXgPq08OqWxLp1cezJ-2ds_LkwqTOXOp0EiphE
 
 ###
 
 PUT http://127.0.0.1:25000/user/
 Accept: application/json
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-###
-
-POST http://127.0.0.1:25000/user/
-Accept: application/json
-Content-Type: application/json
-
-{
-  "email": "Max@mail.ru",
-  "password": "test",
-  "name": "Max",
-  "surname": "",
-  "favorite_genre": ""
-}
 
 ###
 
