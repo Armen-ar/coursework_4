@@ -5,37 +5,37 @@ from project.setup.db import models
 
 
 class Genre(models.Base):
-    __tablename__ = 'genre'
+    __tablename__ = 'genres'
 
     name = Column(String(100), unique=True, nullable=False)
 
 
 class Director(models.Base):
-    __tablename__ = 'director'
+    __tablename__ = 'directors'
 
     name = Column(String(100), unique=True, nullable=False)
 
 
 class Movie(models.Base):
-    __tablename__ = 'movie'
+    __tablename__ = 'movies'
 
     title = Column(String(100), nullable=False)
     description = Column(String(255), nullable=False)
     trailer = Column(String(100), nullable=False)
     year = Column(Integer, nullable=False)
     rating = Column(Float, nullable=False)
-    genre_id = Column(Integer, ForeignKey("genre.id"), nullable=False)
+    genre_id = Column(Integer, ForeignKey("genres.id"), nullable=False)
     genre = relationship("Genre")
-    director_id = Column(Integer, ForeignKey("director.id"), nullable=False)
+    director_id = Column(Integer, ForeignKey("directors.id"), nullable=False)
     director = relationship("Director")
 
 
 class User(models.Base):
-    __tablename__ = 'user'
+    __tablename__ = 'users'
 
     email = Column(String(100), nullable=False, unique=True)
     password = Column(String(100), nullable=False)
     name = Column(String(100))
     surname = Column(String(100))
-    favorite_genre = Column(Integer, ForeignKey("genre.id"))
-    favorite = relationship("Genre")
+    favourite_genre = Column(Integer, ForeignKey("genres.id"))
+    favourite = relationship("Genre")
