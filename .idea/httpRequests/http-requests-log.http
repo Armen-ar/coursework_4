@@ -1,3 +1,45 @@
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "armen@mail.ru",
+  "password": "test1"
+}
+
+<> 2022-07-22T191930.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "armen@mail.ru",
+  "password": "test1"
+}
+
+<> 2022-07-22T182846.201.json
+
+###
+
+GET http://127.0.0.1:25000/movies
+Accept: application/json
+Authorization: access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhc2hhQG1haWwucnUiLCJwYXNzd29yZCI6InlzZzB0c1J1cmV0TzZQemJtRU9DYnZHanNoSEhmSDd2VkQ2ZjhRWEpWOFE9IiwiZXhwIjoxNjU4MjQ3OTU3fQ._vH89X5kvhWZUQ1RS8_HAwEmzlvQDEuXuinSzmuDzDQ
+
+<> 2022-07-22T182835.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "armen@mail.ru",
+  "password": "test1"
+}
+
+###
+
 GET http://127.0.0.1:25000/user
 Accept: application/json
 Content-Type: application/json
@@ -514,42 +556,6 @@ Accept: application/json
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
 
 <> 2022-07-16T102840.200.json
-
-###
-
-GET http://127.0.0.1:25000/movies
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-16T102821.200.json
-
-###
-
-PUT http://127.0.0.1:25000/user/
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-16T102714.405.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T102528.201.json
-
-###
-
-PUT http://127.0.0.1:25000/user/
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-16T102518.405.json
 
 ###
 

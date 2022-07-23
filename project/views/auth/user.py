@@ -2,7 +2,7 @@ from flask import request
 from flask_restx import Namespace, Resource
 
 from project.container import user_service
-from project.helpers.decorators import auth_required
+# from project.helpers.decorators import auth_required
 from project.setup.api.models import user
 
 user_ns = Namespace('user')
@@ -11,41 +11,34 @@ user_ns = Namespace('user')
 @user_ns.route('/')
 class UsersView(Resource):
     @user_ns.marshal_with(user, as_list=True, code=200, description='OK')
-    @auth_required
-    def get(self, email):
+    # @auth_required
+    def get(self):
         """
-        Представление возвращает информацию о пользователе, допуск auth
+        Представление возвращает refresh_token, допуск auth
         """
-        user_ = user_service.get_by_email(email)
+        header = request.headers.environ.get('HTTP_AUTHORIZATION').replace('Bearer ', '')
 
-        return user_, 200
+        return user_service.get_user_by_token(refresh_token=header)
 
-    @auth_required
-    def patch(self, uid):
+    # @auth_required
+    def patch(self):
         """
         Представление обновляет частично фильм по id, допуск auth
         """
-        req_json = request.json
-        if "id" not in req_json:
-            req_json["id"] = uid
-        user_service.update_partical(req_json)
-        return "", 204
+        data = request.json
+        header = request.headers.environ.get('HTTP_AUTHORIZATION').replace('Bearer ', '')
+
+        return user_service.update_user(data, header)
 
 
 @user_ns.route('/password/')
 class UsersView(Resource):
-    @auth_required
+    # @auth_required
     def put(self):
         """
         Представление заменяет старый пароль пользователя на новый по email, допуск auth
         """
-        req_json = request.json
-        other_password = req_json['old_password']
-        password = req_json['new_password']
-        email = req_json.get('email')
-        user = user_service.password_change(password, other_password, email)
-        uid = user.id
-        data = {'id': uid, 'password': password}
-        user_service.update(data)
+        data = request.json
+        header = request.headers.environ.get('HTTP_AUTHORIZATION').replace('Bearer ', '')
 
-        return "", 200
+        return user_service.update_password(data, header)

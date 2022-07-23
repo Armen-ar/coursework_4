@@ -14,7 +14,7 @@ class MoviesView(Resource):
     @movie_ns.marshal_with(movie, as_list=True, code=200, description='OK')
     def get(self):
         """
-        Возвращает все фильмы, в приоритете новые фильмы.
+        Представление возвращает все фильмы, в приоритете новые фильмы.
         """
         filter = request.args.get('status')
 
@@ -30,6 +30,6 @@ class MovieView(Resource):
     @movie_ns.marshal_with(movie, as_list=True, code=200, description='OK')
     def get(self, movie_id: int):
         """
-        Возвращает фильм по id.
+        Представление возвращает фильм по id.
         """
         return movie_service.get_item(movie_id)

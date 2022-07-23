@@ -2,8 +2,8 @@ POST http://127.0.0.1:25000/auth/login
 Content-Type: application/json
 
 {
-  "email": "sasha@mail.ru",
-  "password": "test5"
+  "email": "armen@mail.ru",
+  "password": "test1"
 }
 
 ###

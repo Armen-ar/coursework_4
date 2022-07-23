@@ -32,3 +32,27 @@ class MoviesDAO(BaseDAO[Movie]):
 
 class UserDAO(BaseDAO[User]):
     __model__ = User
+
+    def get_user_by_email(self, email):
+        """
+        Метод возвращает данные пользователя по email
+        """
+        stmt = self._db_session.query(self.__model__).filter(self.__model__.email == email).one()
+
+        return stmt
+
+    def create(self, user_data):
+        """
+        Метод создаёт пользователя по email и password
+        """
+        entity = self.__model__(**user_data)
+
+        self._db_session.add(entity)
+        self._db_session.commit()
+
+    def update(self, email, user_data):
+        """
+        Метод обновляет данные пользователя по email
+        """
+        self._db_session.query(self.__model__).filter(self.__model__.email == email).update(user_data)
+        self._db_session.commit()

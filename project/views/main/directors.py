@@ -14,7 +14,7 @@ class DirectorsView(Resource):
     @director_ns.marshal_with(director, as_list=True, code=200, description='OK')
     def get(self):
         """
-        Возвращает всех режиссёров.
+        Представление возвращает всех режиссёров.
         """
         return director_service.get_all(**page_parser.parse_args())
 
@@ -25,6 +25,6 @@ class DirectorView(Resource):
     @director_ns.marshal_with(director, code=200, description='OK')
     def get(self, director_id: int):
         """
-        Возвращает режиссёра по id.
+        Представление возвращает режиссёра по id.
         """
         return director_service.get_item(director_id)

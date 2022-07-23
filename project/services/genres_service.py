@@ -21,4 +21,4 @@ class GenresService:
         """
         Метод возвращает всех жанры
         """
-        return self.dao.get_all(page=page)
+        return self.dao.get_all(page)

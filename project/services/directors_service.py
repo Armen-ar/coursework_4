@@ -21,4 +21,4 @@ class DirectorsService:
         """
         Метод возвращает всех режиссёров
         """
-        return self.dao.get_all(page=page)
+        return self.dao.get_all(page)

@@ -18,7 +18,7 @@ class TestMoviesService:
         dao.get_all.return_value = [
             Movie(id="id", title="test_title_1", description="test_description_1",
                   trailer="test_trailer_1", year=1, rating=1, genre_id=1, director_id=1),
-            Movie(id=2, title="test_title_2", description="test_description_2",
+            Movie(id="id", title="test_title_2", description="test_description_2",
                   trailer="test_trailer_2", year=2, rating=2, genre_id=2, director_id=2),
         ]
         return dao

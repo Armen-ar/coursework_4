@@ -13,7 +13,7 @@ class GenresView(Resource):
     @genre_ns.marshal_with(genre, as_list=True, code=200, description='OK')
     def get(self):
         """
-        Возвращает все жанры.
+        Представление возвращает все жанры.
         """
         return genre_service.get_all(**page_parser.parse_args())
 
@@ -24,6 +24,6 @@ class GenreView(Resource):
     @genre_ns.marshal_with(genre, code=200, description='OK')
     def get(self, genre_id: int):
         """
-        Возвращает жанр по id.
+        Представление возвращает жанр по id.
         """
         return genre_service.get_item(genre_id)
