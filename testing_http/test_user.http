@@ -1,14 +1,14 @@
 GET http://127.0.0.1:25000/user
 Accept: application/json
 Content-Type: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhc2hhQG1haWwucnUiLCJwYXNzd29yZCI6InlzZzB0c1J1cmV0TzZQemJtRU9DYnZHanNoSEhmSDd2VkQ2ZjhRWEpWOFE9IiwiZXhwIjoxNjU4MjQ5NDcyfQ.8hswcAXgPq08OqWxLp1cezJ-2ds_LkwqTOXOp0EiphE
-
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFAbWFpbC5ydSIsInBhc3N3b3JkIjoiYSIsImV4cCI6MTY1ODY5NDgxMX0.ivXJQgLu57rs1p3DqqD9uc40ta-eY1UhTCpUAQHpP7g
 ###
 
-PUT http://127.0.0.1:25000/user/
+PUT http://127.0.0.1:25000/user/password/
 Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
+Content-Type: application/json
+A: {}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
 ###
 
 DELETE http://127.0.0.1:25000/user/2
@@ -16,3 +16,5 @@ Content-Type: application/json
 Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjU3NjUyMjI1fQ.A6in9MOAM52kfCXp8x-J0y2x4LgQQTT7BgHnsXn4cvk
 
 ###
+
+

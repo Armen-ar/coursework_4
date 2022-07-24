@@ -2,6 +2,359 @@ POST http://127.0.0.1:25000/auth/login
 Content-Type: application/json
 
 {
+  "email": "a@mail.ru",
+  "password": "testtest"
+}
+
+<> 2022-07-24T232036.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "a"
+}
+
+<> 2022-07-24T232029.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "testtest"
+}
+
+<> 2022-07-24T232026.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "a"
+}
+
+<> 2022-07-24T232015.201.json
+
+###
+
+GET http://127.0.0.1:25000/user
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFAbWFpbC5ydSIsInBhc3N3b3JkIjoiYSIsImV4cCI6MTY1ODY5NDgxMX0.ivXJQgLu57rs1p3DqqD9uc40ta-eY1UhTCpUAQHpP7g
+
+<> 2022-07-24T231903.200.json
+
+###
+
+GET http://127.0.0.1:25000/user
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFAbWFpbC5ydSIsInBhc3N3b3JkIjoiYSIsImV4cCI6MTY1ODY5NDgxMX0.ivXJQgLu57rs1p3DqqD9uc40ta-eY1UhTCpUAQHpP7g
+
+<> 2022-07-24T231858.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "a"
+}
+
+<> 2022-07-24T231832.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "a"
+}
+
+<> 2022-07-24T231824.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "t"
+}
+
+<> 2022-07-24T231814.500.html
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@mail.ru",
+  "password": "t"
+}
+
+<> 2022-07-24T231752.500.html
+
+###
+
+GET http://127.0.0.1:25000/user
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231731.200.json
+
+###
+
+PUT http://127.0.0.1:25000/user/password/
+Accept: application/json
+Content-Type: application/json
+Date: {}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231205.400.json
+
+###
+
+GET http://127.0.0.1:25000/user
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231125.200.json
+
+###
+
+PUT http://127.0.0.1:25000/user/password/
+Accept: application/json
+Content-Type: application/json
+Date: {}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231045.400.json
+
+###
+
+PUT http://127.0.0.1:25000/password/
+Accept: application/json
+Content-Type: application/json
+Date: {}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231041.404.html
+
+###
+
+PUT http://127.0.0.1:25000/user/password/
+Accept: application/json
+Content-Type: application/json
+Date: {}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231033.400.json
+
+###
+
+PUT http://127.0.0.1:25000/user/password/
+Accept: application/json
+Content-Type: application/json
+Date: {}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T231015.400.json
+
+###
+
+PUT http://127.0.0.1:25000/user/password/
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T230921.400.json
+
+###
+
+PUT http://127.0.0.1:25000/user/password/
+Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T230909.400.json
+
+###
+
+PUT http://127.0.0.1:25000/user/
+Accept: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T230852.405.json
+
+###
+
+GET http://127.0.0.1:25000/user
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6InRlc3QyIiwiZXhwIjoxNjU4Njk0MTk3fQ.zcKgtjNpU6w2C486te7zfemqBCH2ZoPLTmdbd8MJjQU
+
+<> 2022-07-24T230838.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "david@mail.ru",
+  "password": "test2"
+}
+
+<> 2022-07-24T230818.201.json
+
+###
+
+GET http://127.0.0.1:25000/user
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhc2hhQG1haWwucnUiLCJwYXNzd29yZCI6InlzZzB0c1J1cmV0TzZQemJtRU9DYnZHanNoSEhmSDd2VkQ2ZjhRWEpWOFE9IiwiZXhwIjoxNjU4MjQ5NDcyfQ.8hswcAXgPq08OqWxLp1cezJ-2ds_LkwqTOXOp0EiphE
+
+<> 2022-07-24T230759.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina3@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T225752.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina2@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T225714.500.html
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T225656.500.html
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T225416.500.html
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T225340.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T225112.500.html
+
+###
+
+POST http://127.0.0.1:25000/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "elina@mail.ru",
+  "password": "test6"
+}
+
+<> 2022-07-24T224919.200.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "david@mail.ru",
+  "password": "test2"
+}
+
+<> 2022-07-24T223847.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
+  "email": "armen@mail.ru",
+  "password": "test1"
+}
+
+<> 2022-07-24T223816.201.json
+
+###
+
+POST http://127.0.0.1:25000/auth/login
+Content-Type: application/json
+
+{
   "email": "armen@mail.ru",
   "password": "test1"
 }
@@ -169,393 +522,6 @@ Content-Type: application/json
 }
 
 <> 2022-07-19T191442.200.json
-
-###
-
-GET http://127.0.0.1:25000/genres/
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-19T191247.200.json
-
-###
-
-GET http://127.0.0.1:25000/directors/1
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-19T191242.200.json
-
-###
-
-GET http://127.0.0.1:25000/directors/
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-19T191215.200.json
-
-###
-
-GET http://127.0.0.1:25000/movies
-Accept: application/json
-Authorization: access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNhc2hhQG1haWwucnUiLCJwYXNzd29yZCI6InlzZzB0c1J1cmV0TzZQemJtRU9DYnZHanNoSEhmSDd2VkQ2ZjhRWEpWOFE9IiwiZXhwIjoxNjU4MjQ3OTU3fQ._vH89X5kvhWZUQ1RS8_HAwEmzlvQDEuXuinSzmuDzDQ
-
-<> 2022-07-19T191146.200.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "sasha@mail.ru",
-  "password": "test5"
-}
-
-<> 2022-07-19T191057.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T123139.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/cookies
-Accept: application/cookies
-RefreshToken: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFybWVuQG1haWwucnUiLCJwYXNzd29yZCI6IjJoL0FDbEh1REdxdW5wR0JBRnlESXRsREttQzZjNkpSQXpUZWxKZmZVTlk9IiwiZXhwIjoxNjY5MTk0Njc0fQ.w17QZBEFoyGWu_GTgcc41e6AJBav0dEG0yJd_rO7zZw
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T122619.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/cookies
-Accept: application/cookies
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTk0NzMyfQ.nu3-FxhvSZpnkURZoq2bd667eq-wVQ5rgp9OxjWXVb4
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/cookies
-Accept: application/cookies
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTk0NzMyfQ.nu3-FxhvSZpnkURZoq2bd667eq-wVQ5rgp9OxjWXVb4
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/cookies
-Accept: application/cookies
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTk0NzMyfQ.nu3-FxhvSZpnkURZoq2bd667eq-wVQ5rgp9OxjWXVb4
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T121404.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T121212.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTk0NTE0fQ.5uLgCWtUhqH0fg0x4KSqbWJB2EiTinHNv_JOrNi1ZP8
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T121151.500.html
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTk0NTE0fQ.5uLgCWtUhqH0fg0x4KSqbWJB2EiTinHNv_JOrNi1ZP8
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T120900.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T120834.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTkyNDY5fQ.InAlBrbYz4Gy0bps2fyHQxNIEFLNULUwi1bROxN_38Y
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T113506.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T113430.201.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T113407.500.html
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTkyMTE3fQ.ZBwv3-nl3fZiam5v_n4_5orr9P9lpTFKfBCAQpzWT6E
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T113147.500.html
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTkyMTE3fQ.ZBwv3-nl3fZiam5v_n4_5orr9P9lpTFKfBCAQpzWT6E
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T112902.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T112837.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTg4ODM2fQ.LDlROaDwsKcsShEYIj3d3h-ogM0k4TWBsFvvnMAImYA
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103421.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103356.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTg4NzI3fQ.ty2Kp4uP5QIpSqrJ6mzRpOuB4JkoZQoFEUl3t8QtbI8
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103232.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103208.201.json
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTg4MzI4fQ.nroNLvOHui8A0JU2UTa1tFCDhcfcTcWlsgrE6Sjfra8
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103158.500.html
-
-###
-
-PUT http://127.0.0.1:25000/auth/login/
-Content-Type: application/json
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRhdmlkQG1haWwucnUiLCJwYXNzd29yZCI6IlJMSG95MXVVaTlLemVCcXpFNTFvU0lxSlRKajFsVGQwMFVFbjErLzZJM0U9IiwiZXhwIjoxNjY5MTg4MzI4fQ.nroNLvOHui8A0JU2UTa1tFCDhcfcTcWlsgrE6Sjfra8
-
-{
-  "email": "Max@mail.ru",
-  "password": "test"
-}
-
-<> 2022-07-16T103139.500.html
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103130.201.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103127.201.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103124.201.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103121.201.json
-
-###
-
-POST http://127.0.0.1:25000/auth/login
-Content-Type: application/json
-
-{
-  "email": "david@mail.ru",
-  "password": "test2"
-}
-
-<> 2022-07-16T103109.201.json
-
-###
-
-GET http://127.0.0.1:25000/directors/
-Accept: application/json
-Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hcmlhQG1haWwucnUiLCJwYXNzd29yZCI6InZuRU5IbVRMdkM5RzN2LzRqcjZaQzk3bW1IeTJKQitaOUxoMFdDaWxsTHM9IiwiZXhwIjoxNjU3Nzg1Nzc4fQ.KLGJ1IhJeyQmMp_u1kXKMEQRCUIWvvREQOB_mYwCRfk
-
-<> 2022-07-16T102840.200.json
 
 ###
 

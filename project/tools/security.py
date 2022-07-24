@@ -12,7 +12,7 @@ def __generate_password_digest(password: str) -> bytes:
     Метод хэширует пароль
     """
     return hashlib.pbkdf2_hmac(
-        hash_name="HS256",
+        hash_name="sha256",
         password=password.encode("utf-8"),
         salt=current_app.config["PWD_HASH_SALT"],
         iterations=current_app.config["PWD_HASH_ITERATIONS"],

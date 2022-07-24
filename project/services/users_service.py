@@ -1,5 +1,6 @@
 from project.dao.main import UserDAO
-from project.tools.security import generate_password_hash, generate_tokens, approve_refresh_token, get_data_from_token
+from project.tools.security import generate_password_hash, generate_tokens, approve_refresh_token, get_data_from_token, \
+    compare_passwords_hash
 
 
 class UserService:
@@ -38,7 +39,7 @@ class UserService:
         """
         Метод обновляет данные пользователя(добавляет имя фамилия и любимый жанр) с хэшированным паролем
         """
-        user = self.get_by_email(refresh_token)
+        user = self.get_user_by_token(refresh_token)
         if user:
             self.dao.update(user.email, data)
             return self.get_by_email(refresh_token)
@@ -71,5 +72,8 @@ class UserService:
         """
         user = self.get_user_by_token(refresh_token)
         if user:
-            self.dao.update(user.email, {"password": generate_password_hash(data.get('password_2'))})
-            return self.check(user.email, data.get('password_2'))
+            if compare_passwords_hash(user.password, data.get('old_password')):
+                self.dao.update(user.email, {"password": generate_password_hash(data.get('new_password'))})
+                return self.check(user.email, data.get('new_password'))
+        # return None
+
