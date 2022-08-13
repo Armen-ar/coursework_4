@@ -8,7 +8,7 @@ app = create_app(DevelopmentConfig)
 @app.shell_context_processor
 def shell():
     """
-    Метод ?????????
+    Метод возвращает модели сущностей
     """
     return {
         "db": db,
