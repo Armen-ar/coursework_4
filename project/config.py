@@ -35,3 +35,24 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_ECHO = True
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + BASE_DIR.joinpath('project.db').as_posix()
+
+
+class ProductionConfig(BaseConfig):
+    DEBUG = False
+
+
+class ConfigFactory:
+    flask_env = os.getenv('FLASK_ENV', 'development')
+
+    @classmethod
+    def get_config(cls) -> Type[BaseConfig]:
+        if cls.flask_env == 'development':
+            return DevelopmentConfig
+        elif cls.flask_env == 'production':
+            return ProductionConfig
+        elif cls.flask_env == 'testing':
+            return TestingConfig
+        raise NotImplementedError
+
+
+config = ConfigFactory.get_config()
