@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  app:
+    image: armenar/coursework_4
+    ports:
+      - 80:80
