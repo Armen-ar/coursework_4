@@ -1,5 +1,6 @@
 venv/
 .idea/
+.idea/httpRequests/
 .*_cache/
 __pycache__
 *.db
