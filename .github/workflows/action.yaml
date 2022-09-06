@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: "deploy/docker-compose.yaml"
-          target: "coursework_4_cia"
+          target: "coursework_4_ci"
           strip_components: 1
       - name: deploy app
         uses: appleboy/ssh-action@master
@@ -38,5 +38,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd coursework_4_cia
+            cd coursework_4_ci
             echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d 
