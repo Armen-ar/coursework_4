@@ -514,7 +514,7 @@ jobs: # перечисляем массив
         run: docker build -t armenar/coursework_4:$GITHUB_REF_NAME-$GITHUB_RUN_ID .  # команда для сборки образа на
                                                                                локальном компьютере
         
-        armenar/insta - адрес из Docker Hub (по логину armenar наименование образа insta)
+        armenar/coursework_4 - адрес из Docker Hub (по логину armenar наименование образа insta)
         Специальные переменные из GitHub Actions:
         GITHUB_REF_NAME - при изменении кода нужно сообщить серверам о новой версии образа, переменная содержит в себе
         либо название ветки, которую отправили на GitHub, либо название тэга
@@ -529,7 +529,12 @@ jobs: # перечисляем массив
 Открываем GitHub и в репо проекта входим во вкладку Actions там появился второй workflow и можем зайти в него
 и посмотреть образ
 
-после записываем шаг для отправки в DockerHub дописываем верхний кодЖ
+после записываем шаг для отправки в DockerHub дописываем верхний код:
+      - name: docker push #
+        run: docker push armenar/coursework_4:$GITHUB_REF_NAME-$GITHUB_RUN_ID # пушим вновь созданный образ
+'git add .'
+'git commit -m "docker push"'
+'git push'   
       
       - name: docker login # описание команды допуск к репозиторию
         run: echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
