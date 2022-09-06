@@ -494,6 +494,7 @@ jobs: # перечисляем массив
 находясь в папке проекта
 'git add .'
 'git commit -m "start use actions"'
+'git push'
 Открываем GitHub и в репо проекта входим во вкладку Actions там есть workflow и можем зайти в него и посмотреть
 образ
 
