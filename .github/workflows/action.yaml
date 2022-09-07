@@ -40,3 +40,4 @@ jobs:
           script: |
             cd coursework_4_ci
             echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d 
+
