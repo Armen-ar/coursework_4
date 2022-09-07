@@ -28,8 +28,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "deploy/docker-compose.yaml"
-          target: "coursework_4_ci"
+          source: "docker-compose.yaml"
+          target: "coursework_4_ci/docker-compose.yaml"
           strip_components: 1
       - name: deploy app
         uses: appleboy/ssh-action@master
@@ -40,4 +40,3 @@ jobs:
           script: |
             cd coursework_4_ci
             echo ${{ secrets.PASSWORD }} | sudo -S docker-compose up -d 
-
