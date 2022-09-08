@@ -27,5 +27,8 @@ if __name__ == '__main__':
 
 
 # host="localhost",
+#
+# Если нужно заменить port, тогда и в документе 'main.0041c12b.chunk.js'
+# нужно будет заменить 'localhost:5000' на '127.0.0.1:25000'
 # debug=True
 # port=25000
